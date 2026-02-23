@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon-2/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-2/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon-2/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-2/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon-2/site.webmanifest" />
+
+    <title>Дмитрий Трофимов</title>
+    <style>
+        /* Базовые настройки и цвета */
+        :root {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --card-bg: #1e1e1e;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Блок профиля (Аватар и имя) */
+        .profile {
+            margin-bottom: 40px;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #333;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        /* Блок релизов (Песня) */
+        .release {
+            border-radius: 12px;
+            padding: 30px 20px;
+            margin-bottom: 40px;
+        }
+
+        .release h2 {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .tracks-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .track {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .track-cover {
+            width: 100%;
+            max-width: 250px;
+            height: 250px;
+            border-radius: 8px;
+            object-fit: cover;
+            background-color: #444;
+            margin-bottom: 15px;
+        }
+
+        .track-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            max-width: 250px;
+        }
+
+        /* --- Стили для иконок музыкальных площадок --- */
+        .platform-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            justify-content: center;
+        }
+
+        .platform-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #333; /* Цвет кружка по умолчанию */
+            color: #ffffff; /* Цвет иконки по умолчанию */
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .platform-link svg {
+            width: 25px;
+            height: 25px;
+            fill: currentColor;
+        }
+
+        /* Цвета при наведении */
+        .platform-link.yandex:hover {
+            background-color: #ffcc00;
+            color: #000000;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4);
+        }
+
+        .platform-link.spotify:hover {
+            background-color: #1db954;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(29, 185, 84, 0.4);
+        }
+
+        .platform-link.apple:hover {
+            background-color: #fa243c;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(250, 36, 60, 0.4);
+        }
+        /* ------------------------------------------- */
+
+        /* Блок контактов */
+        .contacts h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+        }
+
+        .btn-telegram {
+            background-color: #27A5E7;
+        }
+
+        .btn-email {
+            background-color: #333;
+            border: 1px solid #555;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="profile">
+            <img src="https://s10.iimage.su/s/23/th_gf7m4Tax3MX4HAVOPoUy88gPU4wy2yXzjMyZbpFop.jpg" alt="Аватар Дмитрия Трофимова" class="avatar">
+            <h1>Дмитрий Трофимов</h1>
+        </header>
+
+        <main>
+            <section class="release">
+                <h2>Слушать сейчас</h2>
+                <div class="tracks-container">
+
+                    <div class="track">
+                        <img src="https://s10.iimage.su/s/23/gTNrFZ8xb180lE6aAAVIKkcMkPe2JZoQhnDHaPGMB.jpg" alt="Обложка трека snow on the window sill" class="track-cover">
+                        <div class="track-title">Snow On The Window Sill</div>
+
+                        <div class="platform-links">
+                            <a href="https://music.yandex.ru/album/40400723/track/147621300?utm_source=web&utm_medium=copy_link" target="_blank" class="platform-link yandex" title="Яндекс Музыка">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="45" viewBox="0 0 442 445" fill="none">
+                                    <path d="M388.708 178.196L387.278 171.451L330.975 161.517L363.752 116.784L359.979 112.4L311.801 135.793L317.888 73.7988L312.958 70.8861L283.65 121.169L250.842 46.3274H245.06L252.881 118.532L170.161 51.5703L163.192 53.6245L226.769 134.628L100.802 92.2255L94.989 98.6641L207.595 163.571L52.3205 176.725L50.5857 186.382L211.947 204.196L77.2764 317.086L83.0893 324.966L243.294 236.665L211.673 392.234H221.26L282.767 245.74L320.232 360.348L326.897 355.074L311.527 238.719L369.839 305.681L373.613 299.518L328.936 216.491L391.326 239.884L391.904 232.863L335.905 191.043L388.708 178.196Z" fill="white"></path>
+                                </svg>
+                            </a>
+                            <a href="https://open.spotify.com/album/0GOVcKYT33h5FHMB70eDHN?si=Bww1fkq9RxKhADVFvDuZAQ" target="_blank" class="platform-link spotify" title="Spotify">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                                </svg>
+                            </a>
+                            <a href="https://music.apple.com/ru/album/snow-on-the-window-sill-single/1878817151?l=en-GB" target="_blank" class="platform-link apple" title="Apple Music">
+                                <svg width="42" height="45" viewBox="0 0 266 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid"">
+                                    <path d="M213.803394,167.030943 C214.2452,214.609646 255.542482,230.442639 256,230.644727 C255.650812,231.761357 249.401383,253.208293 234.24263,275.361446 C221.138555,294.513969 207.538253,313.596333 186.113759,313.991545 C165.062051,314.379442 158.292752,301.507828 134.22469,301.507828 C110.163898,301.507828 102.642899,313.596301 82.7151126,314.379442 C62.0350407,315.16201 46.2873831,293.668525 33.0744079,274.586162 C6.07529317,235.552544 -14.5576169,164.286328 13.147166,116.18047 C26.9103111,92.2909053 51.5060917,77.1630356 78.2026125,76.7751096 C98.5099145,76.3877456 117.677594,90.4371851 130.091705,90.4371851 C142.497945,90.4371851 165.790755,73.5415029 190.277627,76.0228474 C200.528668,76.4495055 229.303509,80.1636878 247.780625,107.209389 C246.291825,108.132333 213.44635,127.253405 213.803394,167.030988 M174.239142,50.1987033 C185.218331,36.9088319 192.607958,18.4081019 190.591988,0 C174.766312,0.636050225 155.629514,10.5457909 144.278109,23.8283506 C134.10507,35.5906758 125.195775,54.4170275 127.599657,72.4607932 C145.239231,73.8255433 163.259413,63.4970262 174.239142,50.1987249" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="track">
+                        <img src="https://defiancedaily.com/wp-content/uploads/2024/07/question-mark-background-uncertainty-confusion-doubt-concept.jpg" alt="Обложка второго трека" class="track-cover">
+                        <div class="track-title">?????</div>
+
+                        <!--
+                        <div class="platform-links">
+                            <a href="ССЫЛКА_НА_ЯНДЕКС_МУЗЫКУ_2" target="_blank" class="platform-link yandex" title="Яндекс Музыка">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="45" viewBox="0 0 442 445" fill="none">
+                                    <path d="M388.708 178.196L387.278 171.451L330.975 161.517L363.752 116.784L359.979 112.4L311.801 135.793L317.888 73.7988L312.958 70.8861L283.65 121.169L250.842 46.3274H245.06L252.881 118.532L170.161 51.5703L163.192 53.6245L226.769 134.628L100.802 92.2255L94.989 98.6641L207.595 163.571L52.3205 176.725L50.5857 186.382L211.947 204.196L77.2764 317.086L83.0893 324.966L243.294 236.665L211.673 392.234H221.26L282.767 245.74L320.232 360.348L326.897 355.074L311.527 238.719L369.839 305.681L373.613 299.518L328.936 216.491L391.326 239.884L391.904 232.863L335.905 191.043L388.708 178.196Z" fill="white"></path>
+                                </svg>
+                            </a>
+                            <a href="ССЫЛКА_НА_SPOTIFY_2" target="_blank" class="platform-link spotify" title="Spotify">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                                </svg>
+                            </a>
+                            <a href="ССЫЛКА_НА_APPLE_MUSIC_2" target="_blank" class="platform-link apple" title="Apple Music">
+                                <svg width="42" height="45" viewBox="0 0 266 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid"">
+                                    <path d="M213.803394,167.030943 C214.2452,214.609646 255.542482,230.442639 256,230.644727 C255.650812,231.761357 249.401383,253.208293 234.24263,275.361446 C221.138555,294.513969 207.538253,313.596333 186.113759,313.991545 C165.062051,314.379442 158.292752,301.507828 134.22469,301.507828 C110.163898,301.507828 102.642899,313.596301 82.7151126,314.379442 C62.0350407,315.16201 46.2873831,293.668525 33.0744079,274.586162 C6.07529317,235.552544 -14.5576169,164.286328 13.147166,116.18047 C26.9103111,92.2909053 51.5060917,77.1630356 78.2026125,76.7751096 C98.5099145,76.3877456 117.677594,90.4371851 130.091705,90.4371851 C142.497945,90.4371851 165.790755,73.5415029 190.277627,76.0228474 C200.528668,76.4495055 229.303509,80.1636878 247.780625,107.209389 C246.291825,108.132333 213.44635,127.253405 213.803394,167.030988 M174.239142,50.1987033 C185.218331,36.9088319 192.607958,18.4081019 190.591988,0 C174.766312,0.636050225 155.629514,10.5457909 144.278109,23.8283506 C134.10507,35.5906758 125.195775,54.4170275 127.599657,72.4607932 C145.239231,73.8255433 163.259413,63.4970262 174.239142,50.1987249" fill="white"/>
+                                </svg>
+                            </a>
+                        </div>
+                        -->
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="contacts">
+                <h2>Связь и сотрудничество</h2>
+                <div class="contact-links">
+                    <a href="https://t.me/ifknow_me" target="_blank" class="btn btn-telegram">Telegram</a>
+                    <a href="mailto:trofim-dima06@mail.ru" class="btn btn-email">trofim-dima06@mail.ru</a>
+                    <a href="mailto:trofim.711@gmail.com" class="btn btn-email">trofim.711@gmail.com</a>
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+</body>
+</html>
